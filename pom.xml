@@ -51,7 +51,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Main-Class>com.github.Joao_Severgnini.leetcode.LeetcodeFetcher</Main-Class>
+              <Main-Class>com.github.Joao-Severgnini.leetcode.LeetcodeFetcher</Main-Class>
             </manifestEntries>
           </archive>
         </configuration>
