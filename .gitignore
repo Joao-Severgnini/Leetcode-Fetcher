@@ -12,7 +12,7 @@ target/
 *.iml
 *.ipr
 *.idea
-.gitgnore
+*.gitgnore
 
 ### Eclipse ###
 .apt_generated
