@@ -28,17 +28,17 @@
       <version>2.17.0</version>
     </dependency>
 
-    <dependency>
-      <!-- JUnit-api to connect with api-->
+ <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.1</version>
+      <version>5.10.0</version> <!-- Atualizado -->
+      <scope>test</scope>
     </dependency>
     <dependency>
-      <!-- JUnit-engine to execute the test -->
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.7.1</version>
+      <version>5.10.0</version> <!-- Atualizado -->
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
@@ -75,6 +75,16 @@
           <shadedClassifierName>all</shadedClassifierName>
         </configuration>
       </plugin>
+ <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M5</version> <!-- Ou uma versão mais recente -->
+      <configuration>
+        <includes>
+          <include>**/LeetCodeFetcherTest.java</include>
+        </includes>
+      </configuration>
+    </plugin>
     </plugins>
   </build>
 </project>
