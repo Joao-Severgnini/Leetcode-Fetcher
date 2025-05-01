@@ -7,4 +7,6 @@ echo "🔧 Compilando e empacotando..."
 mvn package
 
 echo "🚀 Executando aplicação..."
-java -jar target/leetcode-fetcher-1.0-SNAPSHOT-all.jar
+java -jar target/leetcode-fetcher-1.0-SNAPSHOT-all.jar "$@"
+
+echo "✅ Aplicação finalizada."
