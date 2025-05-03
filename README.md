@@ -77,7 +77,7 @@ When running the program, you need to enter the **problem slug** (for example: `
 ./run.sh two-sum
 ```
 
-The program will create a folder and a file named `two-sum.md` containing the full problem description.
+The program will create a folder for the problem, another 2 folders (description adn solution) and a file called `Solution.java` where you should write the solition code.
 
 ---
 
