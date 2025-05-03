@@ -1,56 +1,56 @@
 # 🧠 Leetcode Fetcher
 
-Este é um projeto Java que consome a API GraphQL do [LeetCode](https://leetcode.com) para buscar informações detalhadas sobre problemas, dado o **slug** (nome curto usado na URL).
+This is a Java project that consumes LeetCode's [GraphQL API](https://leetcode.com) to fetch detailed information about problems using their **slug** (the short name used in the URL).
 
-O objetivo é gerar automaticamente um arquivo `.md` (Markdown) com os detalhes do problema, facilitando a documentação e estudo.
-
----
-
-## 📦 Funcionalidades
-
-- Conecta à API GraphQL do LeetCode.
-- Busca dados de um problema a partir do **slug**.
-- Cria um arquivo `.md` com título, dificuldade, descrição, e tags do problema.
+The goal is to automatically generate a `.md` (Markdown) file with problem details, making it easier to document and study problems.
 
 ---
 
-## 🔧 Tecnologias e Bibliotecas
+## 📦 Features
 
-- Java 21
-- Maven
-- [OkHttp](https://square.github.io/okhttp/) – Requisições HTTP
-- [Jackson](https://github.com/FasterXML/jackson) – Manipulação de JSON
-- [JUnit 5](https://junit.org/junit5/) – Testes
-- Maven Shade Plugin – Geração de um JAR executável com todas as dependências
+- Connects to LeetCode's GraphQL API.
+- Retrieves problem data by **slug**.
+- Creates a `.md` file with the problem's title, difficulty, description, and tags.
 
 ---
 
-## 🛠️ Como usar
+## 🔧 Technologies and Libraries
 
-### 1. Clonar o repositório
+- Java 21  
+- Maven  
+- [OkHttp](https://square.github.io/okhttp/) – HTTP requests  
+- [Jackson](https://github.com/FasterXML/jackson) – JSON handling  
+- [JUnit 5](https://junit.org/junit5/) – Testing  
+- Maven Shade Plugin – Generates an executable JAR with all dependencies  
+
+---
+
+## 🛠️ How to Use
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Joao-Severgnini/Leetcode-Fetcher.git
 cd Leetcode-Fetcher
 ```
 
-### 2. Compilar e executar
+### 2. Compile and Run
 
-Você pode usar o script `run.sh` incluído no projeto:
+You can use the provided `run.sh` script:
 
 ```bash
-./run.sh
+./run.sh <problem-slug>
 ```
 
-Esse script irá:
+This script will:
 
-- Limpar o projeto
-- Compilar e empacotar tudo com Maven
-- Executar o programa final
+- Clean the project  
+- Compile and package everything using Maven  
+- Run the final program  
 
-### 3. Executar manualmente
+### 3. Run Manually
 
-Ou execute manualmente:
+Or run manually:
 
 ```bash
 mvn clean package
@@ -59,9 +59,9 @@ java -jar target/leetcode-fetcher-1.0-SNAPSHOT-all.jar
 
 ---
 
-## 🧪 Testes
+## 🧪 Testing
 
-Para rodar os testes JUnit:
+To run JUnit tests:
 
 ```bash
 mvn test
@@ -69,19 +69,19 @@ mvn test
 
 ---
 
-## 📄 Exemplo de uso
+## 📄 Example Usage
 
-Ao rodar o programa, você será solicitado a inserir o **slug** do problema (por exemplo: `two-sum`):
+When running the program, you need to enter the **problem slug** (for example: `two-sum`):
 
+```bash
+./run.sh two-sum
 ```
-Enter the LeetCode problem slug: two-sum
-```
 
-O programa criará um arquivo `two-sum.md` com a descrição completa do problema.
+The program will create a folder and a file named `two-sum.md` containing the full problem description.
 
 ---
 
-## 🗂️ Estrutura do projeto
+## 🗂️ Project Structure
 
 ```
 Leetcode-Fetcher/
@@ -99,12 +99,12 @@ Leetcode-Fetcher/
 
 ---
 
-## 📬 Contribuições
+## 📬 Contributions
 
-Contribuições são bem-vindas! Sinta-se livre para abrir **Issues** ou enviar **Pull Requests**.
+Contributions are welcome! Feel free to open **Issues** or submit **Pull Requests**.
 
 ---
 
-## 📜 Licença
+## 📜 License
 
-Este projeto está licenciado sob a licença MIT.
+This project is licensed under the MIT License.
