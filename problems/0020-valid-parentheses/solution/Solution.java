@@ -2,27 +2,36 @@ import java.util.Stack;
 
 class Solution {
     public boolean isValid(String s) {
-      Stack<Character> stack = new Stack<>();
+        // Create a stack to keep track of opening brackets
+        Stack<Character> stack = new Stack<>();
 
-      for(int i = 0; i < s.length(); i++){
-        char cur = s.charAt(i);
+        // Iterate through each character in the string
+        for (int i = 0; i < s.length(); i++) {
+            char cur = s.charAt(i); // Current character
 
-        if(!stack.isEmpty()){
-          char last = stack.peek();
+            // If the stack is not empty, we can try to match the current character
+            if (!stack.isEmpty()) {
+                char last = stack.peek(); // Peek at the last opening bracket
 
-          if(isPair(last, cur)){
-            stack.pop();
-            continue;
-          }
+                // Check if the last opening and current closing brackets match
+                if (isPair(last, cur)) {
+                    stack.pop(); // Remove the matched opening bracket from the stack
+                    continue;    // Skip to next character
+                }
+            }
+
+            // If no match was found or stack is empty, push the current character
+            stack.push(cur);
         }
-        stack.push(cur);
-      }
-      return stack.isEmpty();
+
+        // If the stack is empty, all brackets matched correctly
+        return stack.isEmpty();
     }
 
-   public boolean isPair(char last, char cur){
-    return(last == '(' && cur == ')') ||
-          (last == '[' && cur == ']') ||
-          (last == '{' && cur == '}');
-   }
+    // Helper method to check if the pair of brackets match
+    public boolean isPair(char last, char cur) {
+        return (last == '(' && cur == ')') ||
+               (last == '[' && cur == ']') ||
+               (last == '{' && cur == '}');
+    }
 }
