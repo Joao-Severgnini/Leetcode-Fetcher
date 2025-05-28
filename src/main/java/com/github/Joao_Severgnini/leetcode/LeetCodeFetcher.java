@@ -68,7 +68,7 @@ public class LeetCodeFetcher {
         JsonNode data = root.get("data").get("question");
 
         // Check if the data is null or empty
-        if(data == null | data.isNull()){
+        if(data == null || data.isNull()){
             throw new IOException("Error: No data found for slug " + slug);
         }
         return data;
